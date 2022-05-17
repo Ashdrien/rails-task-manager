@@ -1,0 +1,9 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+<br>
+<%= link_to 'Update this task', edit_task_path(@task) %>
+<br>
+<%= link_to 'Delete this task', delete_task_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<br>
+<%= link_to 'Main menu', tasks_path %>
